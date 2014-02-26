@@ -63,20 +63,6 @@ include $(BUILD_SHARED_LIBRARY)
 endif
 endif
 
-# Java librilproto
-# =======================================================
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := librilproto-java
-
-LOCAL_PROTOC_OPTIMIZE_TYPE := micro
-
-LOCAL_SRC_FILES := $(call all-java-files-under, $(src_java)) \
-	$(call all-proto-files-under, $(src_proto))
-
-include $(BUILD_STATIC_JAVA_LIBRARY)
-# =======================================================
-
 endif
 
 src_cpp :=
